@@ -77,12 +77,12 @@
                     <div id="myTabContent" class="tab-content">
                         <div class="tab-pane fade in active" id="register">
                             <!--register form-->
-
-                            <form form data-feedback='{"success": "fa-check", "error": "fa-times"}'>
+                            
+                            <form data-feedback='{"success": "fa-check", "error": "fa-times"}'>
                                 <div class="col-lg-10 col-lg-offset-1 col-lg-offset-right-1 col-md-10 col-md-offset-1 col-md-offset-right-1 col-sm-12 col-xs-12 pull-right ">
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-group has-feedback">
-                                        <input type="text" name="fname" id="fname" class="mdl-textfield__input" />
+                                        <input type="text" name="fname" id="fname" class="mdl-textfield__input" runat="server" />
                                         <label class="mdl-textfield__label " for="fullName ">Nombre</label>
                                         <span class="form-control-feedback" aria-hidden="true" id="fname1"></span>
                                     </div>
@@ -92,7 +92,7 @@
                                         <label class="mdl-textfield__label " for="fullName ">Full Name</label>
                                     </div>-->
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
-                                        <input class="mdl-textfield__input " type="text" id="Rut ">
+                                        <input class="mdl-textfield__input " type="text" id="Rut "/>
                                         <label class="mdl-textfield__label " for="Rut ">Rut</label>
                                     </div>
 
@@ -113,7 +113,7 @@
                                 </label>
 
                                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="termsFlag">
-                                <input type="checkbox" id="termsFlag" class="mdl-checkbox__input ">
+                                <input type="checkbox" id="termsFlag" class="mdl-checkbox__input "/>
                                 <span class="mdl-checkbox__label ">Acepto los  <a href="# ">Terminos de Uso</a> y <a href="# ">Politicas de Privacidad</a></span>
                                 </label>
 
@@ -124,28 +124,28 @@
                         </div>
                         <div class="tab-pane fade" id="login">
                             <!--login form-->
-                            <form>
+                            <form runat="server" id="frmLogin">
 
                                 <div class="col-lg-10 col-lg-offset-1 col-lg-offset-right-1 col-md-10 col-md-offset-1 col-md-offset-right-1 col-sm-12 col-xs-12 pull-right ">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="emailAddress">
+                                        <input class="mdl-textfield__input" type="text" id="inputRut" runat="server"/>
                                         <label class="mdl-textfield__label" for="emailAddress">Rut Usuario</label>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-10 col-lg-offset-1 col-lg-offset-right-1 col-md-10 col-md-offset-1 col-md-offset-right-1 col-sm-12 col-xs-12 pull-right ">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="password" id="password">
+                                        <input class="mdl-textfield__input" type="password" id="inputPassword" runat="server"/>
                                         <label class="mdl-textfield__label" for="password">Password</label>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-10 col-lg-offset-1 col-lg-offset-right-1 col-md-10 col-md-offset-1 col-md-offset-right-1 col-sm-12 col-xs-12 pull-right ">
                                     <div class="row">
-                                        <br>
+                                        <br />
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                             <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="rememberPass">
-                                        <input type="checkbox" id="rememberPass" class="mdl-switch__input">
+                                        <input type="checkbox" id="rememberPass" class="mdl-switch__input"/>
                                         <span class="mdl-switch__label">Recuerdame</span>
                                         </label>
 
@@ -157,7 +157,7 @@
                                 </div>
 
                                 <div class="col-lg-10 col-lg-offset-1 col-lg-offset-right-1 col-md-10 col-md-offset-1 col-md-offset-right-1 col-sm-12 col-xs-12 pull-right ">
-                                    <button class="btn lt-register-btn">login <i class="icon-right "></i></button>
+                                    <asp:button class="btn lt-register-btn" runat="server" id="btn_login" Text="Login"></asp:button>
                                 </div>
                             </form>
                             <!--login form-->
